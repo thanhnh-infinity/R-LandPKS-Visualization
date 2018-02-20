@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\nsource('helpers.R')\n\nshinyUI(pageWithSidebar(\n  # Title of the application\n  headerPanel(\"LandCover Data\"),\n  \n  sidebarPanel(\n    h4(\"Select chart:\"),\n    selectInput(\"charts\", \"\", \n                choices = c(\"Cover/Bare ground chart\" ,\n                            \"Height class multi bar chart\",\n                            \"Gap percentage chart\",\n                            \"Species Density chart\",\n                            \"Plant Cover/Composition multi bar chart\",\n                            \"Foliar Cover chart\",\n                            \"test combined chart\"\n                            ),\n                selected = \"Cover/Bare ground chart\"),\n    \n    h4(\"Select plot: \"),\n    #checkboxInput ('checkAll', 'Select All',value = NULL),\n    actionButton(\"selectAll\", \"Select All\"),\n    actionButton(\"deselectAll\", \"Deselect All\"),\n    uiOutput(\"PlotNames\")),\n  \n  mainPanel(\n  br(),\n  htmlOutput (\"chart1\"),\n  h4(\"Description\"),\n  textOutput(\"summary\")\n)\n))\n\n",
+    "created" : 1450492475178.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "689364418",
+    "id" : "FF57491F",
+    "lastKnownWriteTime" : 1450492462,
+    "path" : "/Volumes/Develop_Data_MacOS/All_Workspace/R_Workspace/Visualization_LandCoverCharts/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
